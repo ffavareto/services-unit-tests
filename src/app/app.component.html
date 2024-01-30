@@ -1,0 +1,11 @@
+<input type="text" placeholder="Search a book" [formControl]="inputControl">
+
+<h3>Books</h3>
+
+<ul>
+    @for (book of foundBooks | async; track $index) {
+        <ng-container>
+            <li>{{ book }}</li>
+        </ng-container>
+    }
+</ul>
